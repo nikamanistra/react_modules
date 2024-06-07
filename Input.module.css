@@ -1,0 +1,236 @@
+.input {
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 10px 15px;
+  font-size: 13px;
+  margin: 5px 0;
+  width: 100%;
+  outline: none;
+}
+
+.input::placeholder {
+  font-style: italic;
+}
+
+.input:disabled {
+  background-color: var(--ground_color);
+  color: var(--primary-color);
+}
+
+.inputLogin {
+  background-color: #eee;
+  border: 1px solid #eee;
+}
+
+.input:focus {
+  border-color: var(--secondary-color);
+}
+
+.inputError {
+  border: 1px solid var(--error-color) !important;
+}
+
+.error {
+  padding-top: 3px;
+  width: 230px;
+  color: var(--error-color);
+  font-size: 12px;
+  height: 15px;
+  text-align: left;
+}
+
+.inputFile {
+  display: none;
+}
+
+.inputUser {
+  margin: 0;
+  border: none;
+  border-color: var(--primary-color) !important;
+  border-bottom: 1px solid var(--primary-color);
+  padding: 3px 0 7px;
+  font-size: 15px;
+}
+
+.inputUser:hover,
+.inputUser:focus {
+  box-shadow: 0 1px 0 var(--primary-color);
+}
+
+.inputLabelContainer {
+  position: relative;
+}
+
+.inputHeading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgb(119, 119, 119);
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+}
+
+.inputLabel {
+  width: 100%;
+  padding: 0;
+  padding-bottom: 5px;
+  margin: 0;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  border-color: var(--primary-color) !important;
+  transition: all 0.2s ease-out;
+}
+
+.inputLabel:focus,
+.inputLabel:hover {
+  outline: none;
+  box-shadow: 0 1px 0 var(--primary-color) !important;
+}
+
+.inputLabel:focus ~ .inputHeading,
+.inputLabel:not(:placeholder-shown) ~ .inputHeading {
+  top: -18px;
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+/* Search Input */
+.inputSearchContainer {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  padding: 6px 15px;
+  border-radius: 16px;
+  width: fit-content;
+}
+.inputSearchContainer:hover {
+  border: 1px solid var(--search-color);
+}
+.inputSearchContainer:focus-within {
+  border: 1px solid var(--search-color);
+}
+.inputSearchContainer input:focus {
+  color: var(--search-color);
+}
+.inputSearchContainer input:focus::placeholder {
+  color: var(--search-color);
+}
+
+.inputSearchDisabled:hover {
+  border: 1px solid var(--border-color) !important;
+}
+
+.inputSearchDisabled .inputSearchIcon path {
+  fill: var(--border-color) !important;
+}
+
+.inputSearchDisabled input::placeholder {
+  color: var(--border-color) !important;
+}
+
+.inputSearchLineContainer {
+  display: flex;
+  align-items: center;
+  padding: 2px 7px;
+}
+
+.inputSearch {
+  width: 240px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  font-family: Poppins;
+}
+
+.inputSearchIcon {
+  flex-shrink: 0;
+}
+
+.inputSearch::placeholder {
+  font-style: italic;
+}
+
+.inputSearchLine {
+  min-width: 250px;
+  margin-right: 5px;
+  border: none;
+  border-color: var(--primary-color) !important;
+  border-bottom: 1px solid var(--primary-color);
+  padding: 5px 0;
+  font-size: 16px;
+}
+.inputSearchLine:hover {
+  box-shadow: 0 1px 0 var(--primary-color);
+}
+.inputSearchLine:focus {
+  box-shadow: 0 1px 0 var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color) !important;
+}
+.inputSearchLine::placeholder {
+  font-style: normal;
+  font-size: 14px;
+}
+
+.inputLabelOutline {
+  margin: 0;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid var(--table-border-color);
+  border-radius: 4px;
+}
+
+.inputLabelOutline:hover:not(.inputLabelOutline:disabled) {
+  border-color: var(--primary-color) !important;
+}
+
+.inputLabelOutline:focus {
+  border-color: var(--chart-blue-color) !important;
+  box-shadow: inset 0 0 0 1px var(--chart-blue-color);
+}
+.inputLabelOutline:disabled {
+  background-color: var(--axis-background);
+}
+
+.inputHeadingOutline {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 16px;
+  color: rgb(119, 119, 119);
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+}
+
+.inputLabelOutline:focus ~ .inputHeadingOutline {
+  color: var(--chart-blue-color);
+}
+
+.inputLabelOutline:focus ~ .inputHeadingOutline,
+.inputLabelOutline:not(:placeholder-shown) ~ .inputHeadingOutline {
+  top: -7px;
+  left: 10px;
+  font-size: 12px;
+  background-color: #fefefe;
+  padding: 0 5px;
+}
+
+/* Error container styles */
+.inputErrorContainer {
+  border: 1px solid var(--error-color);
+}
+.inputErrorContainer:hover {
+  border: 1px solid var(--error-color);
+}
+.inputErrorContainer:focus-within {
+  border: 1px solid var(--error-color);
+}
+.inputErrorContainer input:focus {
+  color: var(--primary-text-color);
+}
+.inputErrorContainer input:focus::placeholder {
+  color: var(--primary-text-color);
+}
